@@ -3,7 +3,9 @@ import random
 
 answers_quoi = ["feur", "feur.", "feur!", "Feur.", "FEUR", "FEUR!!", "coubeh", "COUBEH", "QUOICOUBEH", ";)", "APANIAN"]
 answers_comment = ["DANT COUSTEAU", "DANTE CHE GUEVARA"]
-answers_hein = ["2", "deux", "DEUX", "deux?", "DEUX!"]
+answers_hein = ["2", "deux", "DEUX", "deux?", "DEUX!", "deux x)", "deux xD", "deux ^^", "deux! ;)"]
+answers_oui = ["STITI", "stiti", "STITI!!!","STICRAM", "LLY WONKA", "lly wonka x)", "lly wonka", "STITI xD"]
+answers_nan = ["si", "cy", "CY", "NANCY"]
 
 remove = [".", "!", "?", " ", "`", "\n", "\t"]
 
@@ -13,9 +15,6 @@ class MyClient(discord.Client):
         print('Logged on as', self.user)
 
     async def on_message(self, message):
-        def send(message, array):
-            message.channel.send(array[random.randint(0, len(array))])
-
         if message.author == self.user:
             return
 
@@ -24,11 +23,15 @@ class MyClient(discord.Client):
             s.replace(r, "");
 
         if s.endswith("quoi"):
-            await send(message, answers_quoi)
+            await message.channel.send(answers_quoi[random.randint(0, len(answers_quoi) - 1)])
         elif s.endswith("comment"):
-            await send(message, answers_comment)
+            await message.channel.send(answers_comment[random.randint(0, len(answers_comment) - 1)])
         elif s.endswith("hein"):
-            await send(message, answers_hein)
+            await message.channel.send(answers_hein[random.randint(0, len(answers_hein) - 1)])
+        elif s.endswith("oui"):
+            await message.channel.send(answers_oui[random.randint(0, len(answers_oui) - 1)])
+        elif s.endswith("nan"):
+            await message.channel.send(answers_nan[random.randint(0, len(answers_nan) - 1)])
 
 
 
