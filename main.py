@@ -6,7 +6,7 @@ answers_comment = ["DANT COUSTEAU", "DANTE CHE GUEVARA"]
 answers_hein = ["2", "deux", "DEUX", "deux?", "DEUX!", "deux x)", "deux xD", "deux ^^", "deux! ;)"]
 answers_oui = ["STITI", "stiti", "STITI!!!","STICRAM", "LLY WONKA", "lly wonka x)", "lly wonka", "STITI xD"]
 answers_nan = ["si", "cy", "CY", "NANCY"]
-answers_allo = ["à l'huile", "À L'HUILE", "A L'HUILE!!!!", "a l'huile ^_^"]
+answers_allo = ["à l'huile", "À L'HUILE", "A L'HUILE!!!!", "a l'huile ^_^", "alohomora", "ALOHOMORA"]
 answers_chaud = ["CHAUSSURE", "CHAUSSETTE!", "CHAUSSETTE x)", "chocolat", "CHOCOLAT", "CHAUD CHAUD CHOCOLAT!", "CHAAUD DEVANT!", "CHAUD DEVANT x)", "CHAUDS LES MARRONS CHAUDS!", "CHAUUDS LES MARRONS CHAUDS x))", "CHAUD CACAO", "MAGE :D", "AH x)", "biz"]
 
 remove = [".", "!", "?", " ", "`", "\n", "\t", "*", "`"]
