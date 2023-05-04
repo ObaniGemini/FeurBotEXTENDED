@@ -14,7 +14,7 @@ class MyClient(discord.Client):
 
     async def on_message(self, message):
         def send(message, array):
-            await message.channel.send(array[random.randint(0, len(array))])
+            message.channel.send(array[random.randint(0, len(array))])
 
         if message.author == self.user:
             return
@@ -24,13 +24,23 @@ class MyClient(discord.Client):
             s.replace(r, "");
 
         if s.endswith("quoi"):
-            send(message, answers_quoi)
+            await send(message, answers_quoi)
         elif s.endswith("comment"):
-            send(message, answers_comment)
+            await send(message, answers_comment)
         elif s.endswith("hein"):
-            send(message, answers_hein)
+            await send(message, answers_hein)
+
+
+
+file = open('token.txt', 'r')
+token = file.read().replace('\n', '').replace('\t', '').replace(' ', '')
+
+if token == "":
+    print("No token in token.txt")
+    exit(1)
 
 intents = discord.Intents.default()
 intents.message_content = True
+print("Trying to log in with token '" + token + "'")
 client = MyClient(intents=intents)
-client.run('token')
+client.run(token)

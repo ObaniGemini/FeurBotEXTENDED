@@ -5,3 +5,4 @@ all:
 
 clean:
 	rm -rf main.b*
+	truncate --size 0 token.txt
