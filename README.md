@@ -13,4 +13,4 @@ that's it
 ### Depencies
 
 - python-pip (or pip)
-- nuikta
+- nuitka (nuitka3)
