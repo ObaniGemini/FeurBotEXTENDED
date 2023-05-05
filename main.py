@@ -3,10 +3,12 @@ import random
 
 answers = {
     "quoi": ["feur", "feur.", "feur!", "Feur.", "FEUR", "FEUR!!", "coubeh", "COUBEH", "QUOICOUBEH", ";)", "APANIAN"],
+    "qui": ["quette", "ket", "KET", "QUETTE", "KI", "kou :3", "koulol", "Le ch'i (chinois simplifié : 气 ; chinois traditionnel : 氣 ; pinyin : qì ; Wade : ch'i ; EFEO : ts'i), ou ki (japonais : 気), ou encore chi, que l'on peut traduire par « flux d'énergie naturelle », est une notion des cultures chinoise et japonaise qui désigne un principe fondamental formant et animant l'univers et la vie"],
     "comment": ["DANT COUSTEAU", "DANTE CHE GUEVARA"],
     "hein": ["2", "deux", "DEUX", "deux?", "DEUX!", "deux x)", "deux xD", "deux ^^", "deux! ;)"],
     "oui": ["STITI", "stiti", "STITI!!!","STICRAM", "LLY WONKA", "lly wonka x)", "lly wonka", "STITI xD"],
     "nan": ["si", "cy", "CY", "NANCY"],
+    "non": ["bril", "BRIL", "BRIL X)", "BRIL!!"],
     "allo": ["à l'huile", "À L'HUILE", "A L'HUILE!!!!", "a l'huile ^_^", "alohomora", "ALOHOMORA"],
     "chaud": ["CHAUSSURE", "CHAUSSETTE!", "CHAUSSETTE x)", "chocolat", "CHOCOLAT", "CHAUD CHAUD CHOCOLAT!", "CHAAUD DEVANT!", "CHAUD DEVANT x)", "CHAUDS LES MARRONS CHAUDS!", "CHAUUDS LES MARRONS CHAUDS x))", "CHAUD CACAO", "MAGE :D", "AH x)", "biz"]
 }
