@@ -10,11 +10,14 @@ answers = {
     "nan": ["si", "cy", "CY", "NANCY"],
     "non": ["bril", "BRIL", "BRIL X)", "BRIL!!"],
     "allo": ["à l'huile", "À L'HUILE", "A L'HUILE!!!!", "a l'huile ^_^", "alohomora", "ALOHOMORA"],
-    "chaud": ["CHAUSSURE", "CHAUSSETTE!", "CHAUSSETTE x)", "chocolat", "CHOCOLAT", "CHAUD CHAUD CHOCOLAT!", "CHAAUD DEVANT!", "CHAUD DEVANT x)", "CHAUDS LES MARRONS CHAUDS!", "CHAUUDS LES MARRONS CHAUDS x))", "CHAUD CACAO", "MAGE :D", "AH x)", "biz"]
+    "chaud": ["CHAUSSURE", "CHAUSSETTE!", "CHAUSSETTE x)", "chocolat", "CHOCOLAT", "CHAUD CHAUD CHOCOLAT!", "CHAAUD DEVANT!", "CHAUD DEVANT x)", "CHAUDS LES MARRONS CHAUDS!", "CHAUUDS LES MARRONS CHAUDS x))", "CHAUD CACAO", "MAGE :D", "AH x)", "biz"],
+    "what": ["feur", "WATI B", "WATTOUAT", "fewr", "wati b!", "wattouat", "wati style", "wati shirt"],
+    "quoicoubeh": ["quoicouflop", "quoicounul", "quoicou tg", "quoicoustyle", "quoicoupatroopa", "quoicoubecousseh", "quoicoubecoussecoudeh", "...", "tg", "lol", "tu m'as bien eu xd", "bien joué!!"]
 }
 
+taslescramptes = ["hein?", "hein...", "quoi?", "quoi??", "QUOI", "QUOI? xd", "comment ?", "plait-il ?", "Plait-il ?", "pardon ?", "Pardon ?", "...", "oui", "non", "et toi?", "^^"]
 
-remove = [".", "!", "?", " ", "`", "\n", "\t", "*", "`"]
+remove = [".", "!", "?", " ", "`", "\n", "\t", "*", "`", "'"]
 
 
 class MyClient(discord.Client):
@@ -25,17 +28,27 @@ class MyClient(discord.Client):
         if message.author == self.user:
             return
 
+        s = s.replace("é", "e")
+        s = s.replace("è", "e")
+        s = s.replace("ê", "e")
+        s = s.replace("ë", "e")
+
         s = message.content.lower();
         for r in remove:
             s = s.replace(r, "");
 
+        if "jeudemerde" in s or "jeuxdemerde" in s:
+            await message.channel.send("https://cdn.discordapp.com/attachments/759836645146755076/1103796462267158588/cover.jpg")
+        
         for key in answers.keys():
             if s.endswith(key):
                 await message.channel.send(answers[key][random.randint(0, len(answers[key]) - 1)])
-                break
+                return
 
-        if "jeudemerde" in s or "jeuxdemerde" in s:
-            await message.channel.send("https://cdn.discordapp.com/attachments/759836645146755076/1103796462267158588/cover.jpg")
+        s = s.replace("s", "");
+        if "lecrampte" in s or "lecrante" in s or "lecramte" in s:
+            await message.channel.send(taslescramptes[random.randint(0, len(taslescramptes) - 1)])
+
 
 
 file = open('token.txt', 'r')
