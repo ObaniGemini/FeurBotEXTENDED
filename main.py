@@ -28,12 +28,12 @@ class MyClient(discord.Client):
         if message.author == self.user:
             return
 
+        s = message.content.lower();
         s = s.replace("é", "e")
         s = s.replace("è", "e")
         s = s.replace("ê", "e")
         s = s.replace("ë", "e")
 
-        s = message.content.lower();
         for r in remove:
             s = s.replace(r, "");
 
