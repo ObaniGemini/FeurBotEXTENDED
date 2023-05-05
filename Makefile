@@ -1,7 +1,12 @@
-all:
-	pip install -U discord.py
-	nuitka3 main.py
+all: get build
 	./main.bin
+
+get:
+	git pull
+	pip install -U discord.py
+
+build:
+	nuitka3 main.py
 
 clean:
 	rm -rf main.b*
