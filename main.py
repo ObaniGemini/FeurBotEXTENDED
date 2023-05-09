@@ -1,6 +1,13 @@
 import discord
 import random
 
+check_equal = [
+    [],
+    [],
+    [],
+    ["1", "un"],
+    ["de", "2"]
+]
 
 check_space = [
     [],
@@ -60,15 +67,17 @@ class MyClient(discord.Client):
         s = s.replace("ê", "e")
         s = s.replace("ë", "e")
         
-        if message.content == "1":
-            await message.channel.send(answers[3][random.randint(0, len(answers[3]) - 1)])
-
         for r in remove:
             s = s.replace(r, "");
 
         if "demerde" in s:
             await message.channel.send("https://cdn.discordapp.com/attachments/759836645146755076/1103796462267158588/cover.jpg")
         
+        for i in range(len(check_equal)):
+            for key in check_equal[i]:
+                if s == key:
+                    await message.channel.send(answers[i][random.randint(0, len(answers[i]) - 1)])
+                    return
 
         for i in range(len(check_space)):
             for key in check_space[i]:
