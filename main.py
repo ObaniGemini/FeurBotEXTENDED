@@ -6,7 +6,7 @@ check_space = [
     [],
     [],
     [],
-    [" 1", "1 "],
+    [" 1", "1 ", " un", " un "],
     [" de", " de ", " 2", "2 "]
 ]
 
@@ -14,7 +14,7 @@ check_nospace = [
     ["quoi", "koi"],
     ["qui", "ki"],
     ["comment"],
-    ["hein", "un"],
+    ["hein"],
     ["deux"],
     ["oui"],
     ["nan"],
