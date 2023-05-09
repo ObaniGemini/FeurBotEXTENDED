@@ -1,11 +1,21 @@
 import discord
 import random
 
-check = [
+
+check_space = [
+    [],
+    [],
+    [],
+    [" 1", "1 "],
+    [" 2", "2 "]
+]
+
+check_nospace = [
     ["quoi", "koi"],
     ["qui", "ki"],
     ["comment"],
-    ["hein", "un", " 1", "1 "],
+    ["hein", "un"],
+    ["de", "deux"],
     ["oui"],
     ["nan"],
     ["non"],
@@ -20,6 +30,7 @@ answers = [
     ["quette", "ket", "KET", "QUETTE", "KI", "kou :3", "koulol", "Le ch'i (chinois simplifié : 气 ; chinois traditionnel : 氣 ; pinyin : qì ; Wade : ch'i ; EFEO : ts'i), ou ki (japonais : 気), ou encore chi, que l'on peut traduire par « flux d'énergie naturelle », est une notion des cultures chinoise et japonaise qui désigne un principe fondamental formant et animant l'univers et la vie"],
     ["DANT COUSTEAU", "DANTE CHE GUEVARA"],
     ["2", "deux", "DEUX", "deux?", "DEUX!", "deux x)", "deux xD", "deux ^^", "deux! ;)"],
+    ["3", "trois", "TROIS", "Troyes", "Troy", "années x)", "ANNÉES!!", "années?", "années.", "MUSIQUE!", "DE MUSIQUE!", "DE MUSIQUE X)"],
     ["STITI", "stiti", "STITI!!!","STICRAM", "LLY WONKA", "lly wonka x)", "lly wonka", "STITI xD"],
     ["si", "cy", "CY", "NANCY"],
     ["bril", "BRIL", "BRIL X)", "BRIL!!"],
@@ -58,8 +69,17 @@ class MyClient(discord.Client):
         if "demerde" in s:
             await message.channel.send("https://cdn.discordapp.com/attachments/759836645146755076/1103796462267158588/cover.jpg")
         
-        for i in range(len(check)):
-            for key in check[i]:
+
+        for i in range(len(check_space)):
+            for key in check_space[i]:
+                if s.endswith(key):
+                    await message.channel.send(answers[i][random.randint(0, len(answers[i]) - 1)])
+                    return
+
+        s = s.replace(" ", "")
+
+        for i in range(len(check_nospace)):
+            for key in check_nospace[i]:
                 if s.endswith(key):
                     await message.channel.send(answers[i][random.randint(0, len(answers[i]) - 1)])
                     return
