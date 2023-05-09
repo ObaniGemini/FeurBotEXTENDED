@@ -55,7 +55,7 @@ class MyClient(discord.Client):
         for r in remove:
             s = s.replace(r, "");
 
-        if "jeudemerde" in s or "jeuxdemerde" in s:
+        if "demerde" in s:
             await message.channel.send("https://cdn.discordapp.com/attachments/759836645146755076/1103796462267158588/cover.jpg")
         
         for i in range(len(check)):
