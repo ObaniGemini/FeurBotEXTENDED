@@ -37,7 +37,7 @@ answers = [
     ["à l'huile", "À L'HUILE", "A L'HUILE!!!!", "a l'huile ^_^", "alohomora", "ALOHOMORA"],
     ["CHAUSSURE", "CHAUSSETTE!", "CHAUSSETTE x)", "chocolat", "CHOCOLAT", "CHAUD CHAUD CHOCOLAT!", "CHAAUD DEVANT!", "CHAUD DEVANT x)", "CHAUDS LES MARRONS CHAUDS!", "CHAUUDS LES MARRONS CHAUDS x))", "CHAUD CACAO", "MAGE :D", "AH x)", "biz"],
     ["feur", "WATI B", "WATTOUAT", "fewr", "wati b!", "wattouat", "wati style", "wati shirt"],
-    ["quoicouflop", "quoicounul", "quoicou tg", "quoicoustyle", "quoicoupatroopa", "quoicoubecousseh", "quoicoubecoussecoudeh", "...", "tg", "lol", "tu m'as bien eu xd", "bien joué!!"]
+    ["quoicouflop", "quoicounul", "quoicou tg", "quoicoustyle", "quoicoupatroopa", "quoicoubecousseh", "quoicoubecoussecoudeh", "...", "tg", "lol", "tu m'as bien eu xd", "bien joué!!", "quoicouzbeub"]
 ]
 
 taslescramptes = ["hein?", "hein...", "quoi?", "quoi??", "QUOI", "QUOI? xd", "comment ?", "plait-il ?", "Plait-il ?", "pardon ?", "Pardon ?", "...", "oui", "non", "et toi?", "^^", "Excusez-moi?", "Pardonnez?"]
