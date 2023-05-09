@@ -70,8 +70,6 @@ class MyClient(discord.Client):
         for r in remove:
             s = s.replace(r, "");
 
-        if "demerde" in s:
-            await message.channel.send("https://cdn.discordapp.com/attachments/759836645146755076/1103796462267158588/cover.jpg")
         
         for i in range(len(check_equal)):
             for key in check_equal[i]:
@@ -87,6 +85,10 @@ class MyClient(discord.Client):
 
         s = s.replace(" ", "")
 
+        if "demerde" in s:
+            await message.channel.send("https://cdn.discordapp.com/attachments/759836645146755076/1103796462267158588/cover.jpg")
+            return
+        
         for i in range(len(check_nospace)):
             for key in check_nospace[i]:
                 if s.endswith(key):
