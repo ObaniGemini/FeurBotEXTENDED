@@ -6,7 +6,8 @@ check_equal = [
     [],
     [],
     ["1", "un"],
-    ["de", "2"]
+    ["de", "2"],
+    ["3"]
 ]
 
 check_space = [
@@ -14,7 +15,8 @@ check_space = [
     [],
     [],
     [" 1", "1 ", " un", " un "],
-    [" de", " de ", " 2", "2 "]
+    [" de", " de ", " 2", "2 "],
+    [" 3", "3 "]
 ]
 
 check_nospace = [
@@ -23,13 +25,15 @@ check_nospace = [
     ["comment"],
     ["hein"],
     ["deux"],
+    ["trois"],
     ["oui"],
     ["nan"],
     ["non"],
     ["allo"],
     ["chaud", "chau", "chauds"],
     ["what", "wat"],
-    ["quoicoubeh", "quoicoub", "quoicoube"]
+    ["quoicoubeh", "quoicoub", "quoicoube"],
+    ["salut", "salu"]
 ]
 
 answers = [
@@ -38,13 +42,15 @@ answers = [
     ["DANT COUSTEAU", "DANTE CHE GUEVARA"],
     ["2", "deux", "DEUX", "deux?", "DEUX!", "deux x)", "deux xD", "deux ^^", "deux! ;)"],
     ["3", "trois", "TROIS", "Troyes", "Troy", "années x)", "ANNÉES!!", "années?", "années.", "MUSIQUE!", "DE MUSIQUE!", "DE MUSIQUE X)", "ans", "ans.", "années d'études à montpellier", "ans?", "Quatre."],
+    ["SOLEIL", "soleil! ;)", "SOLEILL!", "soleil!!!", "Soleil."],
     ["STITI", "stiti", "STITI!!!","STICRAM", "LLY WONKA", "lly wonka x)", "lly wonka", "STITI xD"],
     ["si", "cy", "CY", "NANCY"],
     ["bril", "BRIL", "BRIL X)", "BRIL!!"],
     ["à l'huile", "À L'HUILE", "A L'HUILE!!!!", "a l'huile ^_^", "alohomora", "ALOHOMORA"],
     ["CHAUSSURE", "CHAUSSETTE!", "CHAUSSETTE x)", "chocolat", "CHOCOLAT", "CHAUD CHAUD CHOCOLAT!", "CHAAUD DEVANT!", "CHAUD DEVANT x)", "CHAUDS LES MARRONS CHAUDS!", "CHAUUDS LES MARRONS CHAUDS x))", "CHAUD CACAO", "MAGE :D", "AH x)", "biz"],
     ["feur", "WATI B", "WATTOUAT", "fewr", "wati b!", "wattouat", "wati style", "wati shirt"],
-    ["quoicouflop", "quoicounul", "quoicou tg", "quoicoustyle", "quoicoupatroopa", "quoicoubecousseh", "quoicoubecoussecoudeh", "...", "tg", "lol", "tu m'as bien eu xd", "bien joué!!", "quoicouzbeub"]
+    ["quoicouflop", "quoicounul", "quoicou tg", "quoicoustyle", "quoicoupatroopa", "quoicoubecousseh", "quoicoubecoussecoudeh", "...", "tg", "lol", "tu m'as bien eu xd", "bien joué!!", "quoicouzbeub"],
+    ["salut!", "SALUT", "salut!!", "salut, ça va ?", "sa va", "sa va?", "salusava ?", "salut x)", "saluuut!", "yo!", "kikou ^^", "hellooo", "hey! :D", "coucou ^^", "tulas"]
 ]
 
 taslescramptes = ["hein?", "hein...", "quoi?", "quoi??", "QUOI", "QUOI? xd", "comment ?", "plait-il ?", "Plait-il ?", "pardon ?", "Pardon ?", "...", "oui", "non", "et toi?", "^^", "Excusez-moi?", "Pardonnez?"]
@@ -88,7 +94,7 @@ class MyClient(discord.Client):
         if "demerde" in s:
             await message.channel.send("https://cdn.discordapp.com/attachments/759836645146755076/1103796462267158588/cover.jpg")
             return
-        
+
         for i in range(len(check_nospace)):
             for key in check_nospace[i]:
                 if s.endswith(key):
