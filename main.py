@@ -94,7 +94,7 @@ class MyClient(discord.Client):
                     return
 
         s = s.replace("s", "");
-        if "lecrampte" in s or "lecrante" in s or "lecramte" in s:
+        if "crampte" in s or "crante" in s or "cramte" in s:
             await message.channel.send(taslescramptes[random.randint(0, len(taslescramptes) - 1)])
 
 
