@@ -1,8 +1,7 @@
-all: get build
+all: deps build
 	./main.bin
 
-get:
-	git pull
+deps:
 	pip install -U discord.py
 
 build:
